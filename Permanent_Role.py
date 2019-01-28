@@ -1,5 +1,6 @@
 from random import *
-import treasure_generator
+
+Valuables = { 1  : 'permanent'}
 
 Permanent = {'2nd Level' : { 1 : 'Expert Light Wooden Sturdy Shield' ,
                              2 : 'Wand of 1st Level spell' ,
@@ -178,6 +179,6 @@ y = 1
 for x in range(int(y)) :
     x = randint(1,7)
     print (x)
-    for x in Treasure['Permanent']['2nd Level'][x] :
+    for x in Permanent['2nd Level'][x] :
         Valuables[1] = x
         print (Valuables[1])          
