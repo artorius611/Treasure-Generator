@@ -1,6 +1,6 @@
 from random import *
 
-Valuables = { 1  : 'permanent'}
+Perm_treasure = []
 
 Permanent = {'2nd Level' : { 1 : 'Expert Light Wooden Sturdy Shield' ,
                              2 : 'Wand of 1st Level spell' ,
@@ -175,10 +175,22 @@ Permanent = {'2nd Level' : { 1 : 'Expert Light Wooden Sturdy Shield' ,
             '19th Level' : {},
             '20th Level' : {}}
 
-y = 1
-for x in range(int(y)) :
-    x = randint(1,7)
-    print (x)
-    for x in Permanent['2nd Level'][x] :
-        Valuables[1] = x
-        print (Valuables[1])          
+class Level_one () :
+    def __init__ (self) :
+        y = 1
+        for x in range(int(y)) :
+            x = randint(1,7)
+            Perm_treasure.append(Permanent['2nd Level'][x])
+        print (Perm_treasure)
+
+class Level_two () : 
+    def __init__ (self) :
+        a = 2
+        b = 1
+        for x in range(int(a)) :
+            x = randint(1,7)
+            Perm_treasure.append(Permanent['2nd Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,9) 
+            Perm_treasure.append(Permanent['3rd Level'][x])
+        print (Perm_treasure)    
