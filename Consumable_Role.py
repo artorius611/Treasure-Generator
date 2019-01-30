@@ -184,15 +184,55 @@ class Level_one () :
         for x in range(int(c)) :
             x = randint(1,20) 
             Con_treasure.append(Consumable['3rd Level'][x])
-        print (Con_treasure)
+
+class Level_one_extra () :
+    def __init__ (self) :
+        a = 1
+        b = 1
+        c = 1
+        for x in range(int(a)) :
+            x = randint(1,32)
+            Con_treasure.append(Consumable['1st Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,16)
+                    Con_treasure.append(Consumable['2nd Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,20) 
+                    Con_treasure.append(Consumable['3rd Level'][x])
 
 class Level_two () : 
     def __init__ (self) :
         a = 2
-        b = 1
+        b = 8
+        c = 4
         for x in range(int(a)) :
-            x = randint(1,7)
-            print (Consumable['2nd Level'][x])
+            x = randint(1,32)
+            Con_treasure.append(Consumable['1st Level'][x])
         for x in range(int(b)) :
-            x = randint(1,9) 
-            print (Consumable['3rd Level'][x])  
+            x = randint(1,16)
+            Con_treasure.append(Consumable['2nd Level'][x])
+        for x in range(int(c)) :
+            x = randint(1,20) 
+            Con_treasure.append(Consumable['3rd Level'][x]) 
+
+class Level_two_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,16)
+            Con_treasure.append(Consumable['2nd Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,16)
+                    Con_treasure.append(Consumable['2nd Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,20) 
+                    Con_treasure.append(Consumable['3rd Level'][x])
