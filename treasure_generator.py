@@ -1,3 +1,4 @@
+
 from random import *
 import Consumable_Role
 import Permanent_Role
@@ -20,7 +21,7 @@ if int(level) == 1 :
         print (Consumable_Role.Con_treasure)
         print (Permanent_Role.Perm_treasure)
         print ('Gold :', gold)
-        
+
 elif int(level) == 2 :
     Consumable_Role.Level_two()
     Permanent_Role.Level_two()
