@@ -236,3 +236,102 @@ class Level_two_extra () :
                 for x in range(int(c)) :
                     x = randint(1,20) 
                     Con_treasure.append(Consumable['3rd Level'][x])
+
+class Level_three () : 
+    def __init__ (self) :
+        a = 2
+        b = 6
+        c = 4
+        for x in range(int(a)) :
+            x = randint(1,16)
+            Con_treasure.append(Consumable['2nd Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,20)
+            Con_treasure.append(Consumable['3rd Level'][x])
+        for x in range(int(c)) :
+            x = randint(1,6) 
+            Con_treasure.append(Consumable['4th Level'][x]) 
+
+class Level_three_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,20)
+            Con_treasure.append(Consumable['3rd Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,20)
+                    Con_treasure.append(Consumable['3rd Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,6) 
+                    Con_treasure.append(Consumable['4th Level'][x])
+
+class Level_four () : 
+    def __init__ (self) :
+        a = 2
+        b = 4
+        c = 4
+        for x in range(int(a)) :
+            x = randint(1,20)
+            Con_treasure.append(Consumable['3rd Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,6)
+            Con_treasure.append(Consumable['4th Level'][x])
+        for x in range(int(c)) :
+            x = randint(1,19) 
+            Con_treasure.append(Consumable['5th Level'][x]) 
+
+class Level_four_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,6)
+            Con_treasure.append(Consumable['4th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,6)
+                    Con_treasure.append(Consumable['4th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,19) 
+                    Con_treasure.append(Consumable['5th Level'][x])
+
+class Level_five () : 
+    def __init__ (self) :
+        a = 2
+        b = 6
+        c = 2
+        for x in range(int(a)) :
+            x = randint(1,6)
+            Con_treasure.append(Consumable['3rd Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,19)
+            Con_treasure.append(Consumable['4th Level'][x])
+        for x in range(int(c)) :
+            x = randint(1,10) 
+            Con_treasure.append(Consumable['5th Level'][x]) 
+
+class Level_five_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,19)
+            Con_treasure.append(Consumable['5th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,19)
+                    Con_treasure.append(Consumable['5th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,10) 
+                    Con_treasure.append(Consumable['6th Level'][x])
