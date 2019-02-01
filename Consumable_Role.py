@@ -126,8 +126,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               9 : 'Wyvern Poison' ,
                               10 : 'Greater Healing Potion' ,
                               11 : 'Potion of Flying' , 
-                              12 : 'Wand of 4th Level Spell' ,
-                              },
+                              12 : 'Wand of 4th Level Spell' ,},
               '9th Level' : { 1 : 'Spellstrike Ammunition 4th' ,
                               2 : 'Dust of Disappearing' ,
                               3 : 'Whip Feather Token' ,
@@ -160,15 +159,60 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               4 : 'Blightburn Resin' ,
                               5 : 'Scroll of 6th Level Spell' ,
                               6 : 'Mending Lattice'},
-             '12th Level' : {},
-             '13th Level' : {},
-             '14th Level' : {},
-             '15th Level' : {},
-             '16th Level' : {},
-             '17th Level' : {},
-             '18th Level' : {},
-             '19th Level' : {},
-             '20th Level' : {}}
+             '12th Level' : { 1 : 'Greater Explosive Ammunition' ,
+                              2 : 'Greater Elixir of Life' ,
+                              3 : 'Slumber Poison' ,
+                              4 : 'Adult Dragons Breath Potion' ,
+                              5 : 'Major Healing Potion' ,
+                              6 : 'Alabaster Reliquary' ,
+                              7 : 'Dazinf Tremblant' ,
+                              8 : 'Obsidian Reliquary'},
+             '13th Level' : { 1 : 'Spellstrike Ammunition 6th' ,
+                              2 : 'Greater Bestial Mutagen' ,
+                              3 : 'Greater Bullheaded Mutagen' ,
+                              4 : 'Greater Cognitive Mutagen' ,
+                              5 : 'Greater Juggernaut Mutagen' ,
+                              6 : 'Greater Quicksilver Mutagen' ,
+                              7 : 'Greater Silvertounge Mutagen' ,
+                              8 : 'Deathcap Powder' ,
+                              9 : 'Purple Worm Venom' ,
+                              10 : 'Greater Potion of Resistance' ,
+                              11 : 'Panacea' ,
+                              12 : 'Scroll of 7th Level Spell' ,
+                              13 : 'Sunstone Beads'},
+             '14th Level' : { 1 : 'Ghost Ammunition' ,
+                              2 : 'Stone Bullet' ,
+                              3 : 'Greater Potion of Flying' ,
+                              4 : 'TrueSight Potion' ,
+                              5 : 'Vipers Fang'},
+             '15th Level' : { 1 : 'Disintergration Bolt' ,
+                              2 : 'Spellstrike Ammunition 7th' ,
+                              3 : 'Obfuscation Oil' ,
+                              4 : 'Dragon Bile' ,
+                              5 : 'Insanity Mist' ,
+                              6 : 'Scroll of 8th Level Spell' ,
+                              7 : 'Ghost Dust'},
+             '16th Level' : { 1 : 'True Elixir of Life' ,
+                              2 : 'Brimstone Fumes' ,
+                              3 : 'Nightmare Vapor'},
+             '17th Level' : { 1 : 'Spellstrike Ammunition 8th' ,
+                              2 : 'True Bestial Mutagen' ,
+                              3 : 'True Bullhead Mutagen' ,
+                              4 : 'True Cognitive Mutagen' ,
+                              5 : 'True Juggernaut Mutagen' ,
+                              6 : 'True Quicksilver Mutagen' ,
+                              7 : 'True Silvertounge Mutagen' ,
+                              8 : 'Hemlock' ,
+                              9 : 'Wyrm Dragons Breath Potion' ,
+                              10 :'Scroll of 9th Level Spell' ,
+                              11 : 'Spell Sliver'},
+             '18th Level' : { 1 : 'Kings Sleep'},
+             '19th Level' : { 1 : 'Spellstrike Ammunition 9th' ,
+                              2 : 'Black Lotus Extract'},
+             '20th Level' : { 1 : 'Elixir of Rejuvination' ,
+                              2 : 'Antimagic Oil' ,
+                              3 : 'Tears of Death' ,
+                              4 : 'Philosophers Stone'}}
 
 class Level_one () :
     def __init__ (self) :
@@ -184,7 +228,6 @@ class Level_one () :
         for x in range(int(c)) :
             x = randint(1,20) 
             Con_treasure.append(Consumable['3rd Level'][x])
-
 class Level_one_extra () :
     def __init__ (self) :
         a = 1
@@ -203,7 +246,6 @@ class Level_one_extra () :
                 for x in range(int(c)) :
                     x = randint(1,20) 
                     Con_treasure.append(Consumable['3rd Level'][x])
-
 class Level_two () : 
     def __init__ (self) :
         a = 2
@@ -218,7 +260,6 @@ class Level_two () :
         for x in range(int(c)) :
             x = randint(1,20) 
             Con_treasure.append(Consumable['3rd Level'][x]) 
-
 class Level_two_extra () : 
     def __init__ (self) :
         b = 1
@@ -236,7 +277,6 @@ class Level_two_extra () :
                 for x in range(int(c)) :
                     x = randint(1,20) 
                     Con_treasure.append(Consumable['3rd Level'][x])
-
 class Level_three () : 
     def __init__ (self) :
         a = 2
@@ -251,7 +291,6 @@ class Level_three () :
         for x in range(int(c)) :
             x = randint(1,6) 
             Con_treasure.append(Consumable['4th Level'][x]) 
-
 class Level_three_extra () : 
     def __init__ (self) :
         b = 1
@@ -269,7 +308,6 @@ class Level_three_extra () :
                 for x in range(int(c)) :
                     x = randint(1,6) 
                     Con_treasure.append(Consumable['4th Level'][x])
-
 class Level_four () : 
     def __init__ (self) :
         a = 2
@@ -284,7 +322,6 @@ class Level_four () :
         for x in range(int(c)) :
             x = randint(1,19) 
             Con_treasure.append(Consumable['5th Level'][x]) 
-
 class Level_four_extra () : 
     def __init__ (self) :
         b = 1
@@ -302,7 +339,6 @@ class Level_four_extra () :
                 for x in range(int(c)) :
                     x = randint(1,19) 
                     Con_treasure.append(Consumable['5th Level'][x])
-
 class Level_five () : 
     def __init__ (self) :
         a = 2
@@ -310,14 +346,13 @@ class Level_five () :
         c = 2
         for x in range(int(a)) :
             x = randint(1,6)
-            Con_treasure.append(Consumable['3rd Level'][x])
+            Con_treasure.append(Consumable['4th Level'][x])
         for x in range(int(b)) :
             x = randint(1,19)
-            Con_treasure.append(Consumable['4th Level'][x])
+            Con_treasure.append(Consumable['5th Level'][x])
         for x in range(int(c)) :
             x = randint(1,10) 
-            Con_treasure.append(Consumable['5th Level'][x]) 
-
+            Con_treasure.append(Consumable['6th Level'][x]) 
 class Level_five_extra () : 
     def __init__ (self) :
         b = 1
@@ -335,3 +370,158 @@ class Level_five_extra () :
                 for x in range(int(c)) :
                     x = randint(1,10) 
                     Con_treasure.append(Consumable['6th Level'][x])
+class Level_six () : 
+    def __init__ (self) :
+        a = 2
+        b = 4
+        c = 2
+        for x in range(int(a)) :
+            x = randint(1,19)
+            Con_treasure.append(Consumable['5th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,10)
+            Con_treasure.append(Consumable['6th Level'][x])
+        for x in range(int(c)) :
+            x = randint(1,11) 
+            Con_treasure.append(Consumable['7th Level'][x]) 
+class Level_six_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,10)
+            Con_treasure.append(Consumable['6th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,10)
+                    Con_treasure.append(Consumable['6th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,11) 
+                    Con_treasure.append(Consumable['7th Level'][x])
+class Level_seven () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        c = 4
+        for x in range(int(a)) :
+            x = randint(1,10)
+            Con_treasure.append(Consumable['6th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,11)
+            Con_treasure.append(Consumable['7th Level'][x])
+        for x in range(int(c)) :
+            x = randint(1,12) 
+            Con_treasure.append(Consumable['8th Level'][x]) 
+class Level_seven_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,11)
+            Con_treasure.append(Consumable['7th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,11)
+                    Con_treasure.append(Consumable['7th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,12) 
+                    Con_treasure.append(Consumable['8th Level'][x])
+class Level_eight () : 
+    def __init__ (self) :
+        a = 2
+        b = 4
+        c = 2
+        for x in range(int(a)) :
+            x = randint(1,11)
+            Con_treasure.append(Consumable['7th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,12)
+            Con_treasure.append(Consumable['8th Level'][x])
+        for x in range(int(c)) :
+            x = randint(1,15) 
+            Con_treasure.append(Consumable['9th Level'][x]) 
+class Level_eight_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,12)
+            Con_treasure.append(Consumable['8th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,12)
+                    Con_treasure.append(Consumable['8th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,15) 
+                    Con_treasure.append(Consumable['9th Level'][x])
+class Level_nine () : 
+    def __init__ (self) :
+        a = 2
+        b = 4
+        c = 2
+        for x in range(int(a)) :
+            x = randint(1,12)
+            Con_treasure.append(Consumable['8th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,15)
+            Con_treasure.append(Consumable['9th Level'][x])
+        for x in range(int(c)) :
+            x = randint(1,11) 
+            Con_treasure.append(Consumable['10th Level'][x]) 
+class Level_nine_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,15)
+            Con_treasure.append(Consumable['9th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,15)
+                    Con_treasure.append(Consumable['9th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,11) 
+                    Con_treasure.append(Consumable['10th Level'][x])
+class Level_ten () : 
+    def __init__ (self) :
+        a = 2
+        b = 4
+        c = 2
+        for x in range(int(a)) :
+            x = randint(1,15)
+            Con_treasure.append(Consumable['9th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,11)
+            Con_treasure.append(Consumable['10th Level'][x])
+        for x in range(int(c)) :
+            x = randint(1,6) 
+            Con_treasure.append(Consumable['11th Level'][x]) 
+class Level_ten_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,11)
+            Con_treasure.append(Consumable['10th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,11)
+                    Con_treasure.append(Consumable['10th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,6) 
+                    Con_treasure.append(Consumable['11th Level'][x])
