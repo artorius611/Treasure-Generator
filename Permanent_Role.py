@@ -164,15 +164,131 @@ Permanent = {'2nd Level' : { 1 : 'Expert Light Wooden Sturdy Shield' ,
                              16 : 'Greater Doubling Rings' ,
                              17 : 'Necklace of the Fireballs Type 4' ,
                              18 : 'Robe of the Archmage'},
-            '12th Level' : {},
-            '13th Level' : {},
-            '14th Level' : {},
-            '15th Level' : {},
-            '16th Level' : {},
-            '17th Level' : {},
-            '18th Level' : {},
-            '19th Level' : {},
-            '20th Level' : {}}
+            '12th Level' : { 1 :'Mail of Luck' ,
+                             2 : 'Doctors Marvelous Medicine' ,
+                             3 : 'Master Eleven Chain' ,
+                             4 : 'Mithril Chain Shirt' ,
+                             5 : 'Fortification' ,
+                             6 : '+3 Weapon Potency' ,
+                             7 : 'Master Heavy Adimantine Sturdy Shield' ,
+                             8 : '+3 Magic Weapon' ,
+                             9 : 'Bracers of Armor 6th' ,
+                             10 : 'Greater Ring of the Ram' ,
+                             11 : 'Greater Ring of Wizardry',
+                             12 : '+3 Handwraps of Mighty Fists', 
+                             13 : 'Pink Rhomboid Aeon Stone' ,
+                             14 : 'Ring of Climbing' ,
+                             15 : 'Ring of Swimming' ,
+                             16 : 'Spell Duelists Gloves' ,
+                             17 : 'Spell Duelists Wand' ,
+                             18 : 'Winged Boots'},
+            '13th Level' : { 1 : 'Plate of the Deep' ,
+                             2 : 'Barding of the Zephyr' ,
+                             3 : 'Bag of Holding 4' ,
+                             4 : 'Greater Skeleton Key',
+                             5 : 'Greater Energy Resistance' ,
+                             6 : 'Greater Slick' ,
+                             7 : 'Keen' ,
+                             8 : 'Spell Storing' ,
+                             9 : 'Floating Shield' ,
+                             10 : 'Greater Staff of Abjuration' ,
+                             11 : 'Greater Staff of Conjuration' ,
+                             12 : 'Greater Staff of Divination' ,
+                             13 : 'Greater Staff of Enchantment' ,
+                             14 : 'Greater Staff of Evocation' ,
+                             15 : 'Greater Staff of Illusion' ,
+                             16 : 'Greater Staff of Necromancy' ,
+                             17 : 'Greater Staff of Transmutation' ,
+                             18 : 'Dwarven Thrower' ,
+                             19 : 'Greater Boots of Elvenkind' ,
+                             20 : 'Greater Choker ofELocution' ,
+                             21 : 'Greater Clandestine Cloak' ,
+                             22 : 'Greater Coyote Cloak' ,
+                             23 : 'Greater Crafters Eyepiece' ,
+                             24 : 'Phylactery of Faithfulness' ,
+                             25 : 'Greater Ring of Lies' ,
+                             26 : 'Greater Trackers Goggles' ,
+                             27 : 'Necklace of Fireballs type 5' ,
+                             28 : 'Pale Lavender Ellipsoid Aeon Stone'},
+            '14th Level' : { 1 : 'Greater Horsehoes of Speed' ,
+                             2 : 'Antimagic' ,
+                             3 : 'Dancing' ,
+                             4 : 'Greater Corrosive' ,
+                             5 : 'Greater Flaming' ,
+                             6 : 'Greater Frost' ,
+                             7 : 'Greater Shadow' ,
+                             8 : 'Greater Shock' ,
+                             9 : 'Holy Avenger' ,
+                             10 : 'Anklets of Alacrity' ,
+                             11 : 'Belt of Giant Strength' ,
+                             12 : 'Belt of Regeneration' ,
+                             13 : 'Circlet of Persuasion' ,
+                             14 : 'Diadem of Intellect' ,
+                             15 : 'Greater boots of bounding' ,
+                             16 : 'Greater Cloak of the Bat' ,
+                             17 : 'Greater Dancing Scarf' ,
+                             18 : 'Greater Demon Mask' ,
+                             19 : 'Greater Hat of the Magi' ,
+                             20 : 'Greater Phylactery of the Occult' ,
+                             21 : 'Greater Ring of Energy Resistance' ,
+                             22 : 'Headband of Inspiring Wisdom' ,
+                             23 : 'Major ring of Wizardry' ,
+                             24 : 'Greater Primeol Mistletoe'},
+            '15th Level' : { 1 : '+4 Magic Armor' ,
+                             2 : '+4 Armor Potency' ,
+                             3 : 'Greater Disrupting' ,
+                             4 : 'Void' ,
+                             5 : 'Greater Staff of Healing' ,
+                             6 : 'Greater Healers Gloves' ,
+                             7 : 'Greater Persona Mask' ,
+                             8 : 'Legendary Handwraps of Mighty Fists' ,
+                             9 : 'Necklace of Fireballs Type 6'},
+            '16th Level' : { 1 : 'Greater Thurible of Revelation' ,
+                             2 : 'Speed' ,
+                             3 : '+ 4 Weapon Potency' ,
+                             4 : 'Staff of Power' ,
+                             5 : 'Bracers of Armor 8th' ,
+                             6 : 'Greater Alchemist Goggles' ,
+                             7 : 'Greater Spell Duelists Gloves' ,
+                             8 : 'Greater Spell Duelists Wand' ,
+                             9 : '+4 Handwras of Mighty Fists' ,
+                             10 : 'Orange Prism Aeon Stone'},
+            '17th Level' : { 1 : 'Ethereal' ,
+                             2 : 'Vorpal' ,
+                             3 : 'Legendary Heavy Steel Sturdy Shield' ,
+                             4 : 'Reflecting Shield' ,
+                             5 : 'Greater Armbands of Athelticism' ,
+                             6 : 'Greater Daredevils Boots' ,
+                             7 : 'Greater Messengers Ring' ,
+                             8 : 'Necklace of Fireballs Type 7' ,
+                             9 : 'Robe of Eyes' ,
+                             10 : 'Whisper of the first lie'},
+            '18th Level' : { 1 : 'Greater Doctors Marvelous Medicine' ,
+                             2 : 'Possible Tome' ,
+                             3 : 'Virtuosos instrument' ,
+                             4 : 'Orichalcum Starknife' ,
+                             5 : 'Greater Fortification' ,
+                             6 : 'Indesructable Shield' ,
+                             7 : 'Legendary Heavy Adamantine Sturdy Shield' ,
+                             8 : 'Greater CLoack of Elvenkind' ,
+                             9 : 'Greater Ring of ManiacalDevices'},
+            '19th Level' : { 1 : '+5 Magic Armor' ,
+                             2 : 'Legendary Elven Chain' ,
+                             3 : '+5 Armor Potency' ,
+                             4 : 'Luck Blade' ,
+                             5 : 'Mattock of the Titans' ,
+                             6 : 'Sky Hammer' ,
+                             7 : 'Greater Robe of the Archmage' ,
+                             8 : 'Inexplicable Apparatus' ,
+                             9 : 'Lavender and Green Elipsoid Aeon Stone' ,
+                             10 :'Third Eye'},
+            '20th Level' : {1 : '+5 Weapon potency' ,
+                            2 : '+5 Magic Weapon' ,
+                            3 : 'Bracers of Armor +5' ,
+                            4 : '+5 Handwraps of Mighty Fists' ,
+                            5 : 'Supreme Spell Duelists Gloves' ,
+                            6 : 'Supreme Spell Duelists Wand' ,
+                            7 : 'Greater Whisper of the First Lie'}}
 
 class Level_one () :
     def __init__ (self) :
@@ -186,7 +302,6 @@ class Level_one_extra () :
         for x in range(int(y)) :
             x = randint(1,7)
             Perm_treasure.append(Permanent['2nd Level'][x])
-
 class Level_two () : 
     def __init__ (self) :
         a = 2
@@ -197,11 +312,292 @@ class Level_two () :
         for x in range(int(b)) :
             x = randint(1,9) 
             Perm_treasure.append(Permanent['3rd Level'][x])  
-
 class Level_two_extra () : 
     def __init__ (self) :
         a = 1
         for x in range(int(a)) :
             x = randint(1,7)
             Perm_treasure.append(Permanent['2nd Level'][x])
- 
+class Level_three () : 
+    def __init__ (self) :
+        a = 3
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,9)
+            Perm_treasure.append(Permanent['3rd Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,12) 
+            Perm_treasure.append(Permanent['4th Level'][x])  
+class Level_three_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,9)
+            Perm_treasure.append(Permanent['3rd Level'][x]) 
+class Level_four () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,12)
+            Perm_treasure.append(Permanent['4th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,28) 
+            Perm_treasure.append(Permanent['5th Level'][x])  
+class Level_four_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,12)
+            Perm_treasure.append(Permanent['4th Level'][x])
+class Level_five () : 
+    def __init__ (self) :
+        a = 2
+        b = 1
+        c = 1
+        for x in range(int(a)) :
+            x = randint(1,28)
+            Perm_treasure.append(Permanent['5th Level'][x])
+        for x in range(int(c)) :
+            x = randint(1,12)
+            Perm_treasure.append(Permanent['4th Level'][x])        
+        for x in range(int(b)) :
+            x = randint(1,18) 
+            Perm_treasure.append(Permanent['6th Level'][x])  
+class Level_five_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,28)
+            Perm_treasure.append(Permanent['5th Level'][x]) 
+class Level_six () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,18)
+            Perm_treasure.append(Permanent['6th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,16) 
+            Perm_treasure.append(Permanent['7th Level'][x])  
+class Level_six_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,18)
+            Perm_treasure.append(Permanent['6th Level'][x]) 
+class Level_seven () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,16)
+            Perm_treasure.append(Permanent['7th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,9) 
+            Perm_treasure.append(Permanent['8th Level'][x])  
+class Level_seven_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,16)
+            Perm_treasure.append(Permanent['7th Level'][x])
+class Level_eight () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,9)
+            Perm_treasure.append(Permanent['8th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,28) 
+            Perm_treasure.append(Permanent['9th Level'][x])  
+class Level_eight_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,9)
+            Perm_treasure.append(Permanent['8th Level'][x]) 
+class Level_nine () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,28)
+            Perm_treasure.append(Permanent['9th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,18) 
+            Perm_treasure.append(Permanent['10th Level'][x])  
+class Level_nine_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,28)
+            Perm_treasure.append(Permanent['9th Level'][x]) 
+class Level_ten () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,18)
+            Perm_treasure.append(Permanent['10th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,18) 
+            Perm_treasure.append(Permanent['11th Level'][x])  
+class Level_ten_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,18)
+            Perm_treasure.append(Permanent['10th Level'][x]) 
+class Level_eleven () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,18)
+            Perm_treasure.append(Permanent['11th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,18) 
+            Perm_treasure.append(Permanent['12th Level'][x])  
+class Level_eleven_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,18)
+            Perm_treasure.append(Permanent['11th Level'][x]) 
+class Level_twelve () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,18)
+            Perm_treasure.append(Permanent['12th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,28) 
+            Perm_treasure.append(Permanent['13th Level'][x])  
+class Level_twelve_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,18)
+            Perm_treasure.append(Permanent['12th Level'][x]) 
+class Level_thirteen () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,28)
+            Perm_treasure.append(Permanent['13th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,24) 
+            Perm_treasure.append(Permanent['14th Level'][x])  
+class Level_thirteen_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,28)
+            Perm_treasure.append(Permanent['13th Level'][x]) 
+class Level_fourteen () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,24)
+            Perm_treasure.append(Permanent['14th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,9) 
+            Perm_treasure.append(Permanent['15th Level'][x])  
+class Level_fourteen_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,24)
+            Perm_treasure.append(Permanent['14th Level'][x]) 
+class Level_fifteen () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,9)
+            Perm_treasure.append(Permanent['15th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,10) 
+            Perm_treasure.append(Permanent['16th Level'][x])  
+class Level_fifteen_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,9)
+            Perm_treasure.append(Permanent['15th Level'][x]) 
+class Level_sixteen () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,10)
+            Perm_treasure.append(Permanent['16th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,10) 
+            Perm_treasure.append(Permanent['17th Level'][x])  
+class Level_sixteen_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,10)
+            Perm_treasure.append(Permanent['16th Level'][x]) 
+class Level_seventeen () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,10)
+            Perm_treasure.append(Permanent['17th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,9) 
+            Perm_treasure.append(Permanent['18th Level'][x])  
+class Level_seventeen_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,10)
+            Perm_treasure.append(Permanent['17th Level'][x]) 
+class Level_eighteen () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,9)
+            Perm_treasure.append(Permanent['18th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,10) 
+            Perm_treasure.append(Permanent['19th Level'][x])  
+class Level_eighteen_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,9)
+            Perm_treasure.append(Permanent['18th Level'][x]) 
+class Level_nineteen () : 
+    def __init__ (self) :
+        a = 2
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,10)
+            Perm_treasure.append(Permanent['19th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,7) 
+            Perm_treasure.append(Permanent['20th Level'][x])  
+class Level_nineteen_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,10)
+            Perm_treasure.append(Permanent['19th Level'][x]) 
+class Level_ten () : 
+    def __init__ (self) :
+        a = 2
+        for x in range(int(a)) :
+            x = randint(1,7)
+            Perm_treasure.append(Permanent['20th Level'][x])
+class Level_ten_extra () : 
