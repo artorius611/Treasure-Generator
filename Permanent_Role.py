@@ -594,10 +594,15 @@ class Level_nineteen_extra () :
         for x in range(int(a)) :
             x = randint(1,10)
             Perm_treasure.append(Permanent['19th Level'][x]) 
-class Level_tewenty () : 
+class Level_twenty () : 
     def __init__ (self) :
         a = 2
         for x in range(int(a)) :
             x = randint(1,7)
             Perm_treasure.append(Permanent['20th Level'][x])
 class Level_twenty_extra () : 
+    def __init__ (self) :
+        a = 1
+        for x in range(int(a)) :
+            x = randint(1,7)
+            Perm_treasure.append(Permanent['20th Level'][x])                                                                                                                         
