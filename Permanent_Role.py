@@ -2,12 +2,11 @@ from random import *
 
 Perm_treasure = []
 Permanent = {'2nd Level' : { 1 : 'Expert Light Wooden Sturdy Shield' ,
-                             2 : 'Wand of 1st Level spell' ,
-                             3 : 'Bracers of Armor 1st',
-                             4 : 'Broach of Shielding' ,
-                             5 : 'Expert Handwraps of Mighty Fists' ,
-                             6 : 'Hand of the Mage' , 
-                             7 : 'Hat of disguise'},
+                             2 : 'Bracers of Armor 1st',
+                             3 : 'Broach of Shielding' ,
+                             4 : 'Expert Handwraps of Mighty Fists' ,
+                             5 : 'Hand of the Mage' , 
+                             6 : 'Hat of disguise'},
              '3rd Level' : { 1 : '+1 Magic light or medium Armor' ,
                              2 : 'Cold Iron Warhammer' ,
                              3 : 'Silver Dagger' ,
@@ -25,10 +24,9 @@ Permanent = {'2nd Level' : { 1 : 'Expert Light Wooden Sturdy Shield' ,
                              6 : 'Slick' ,
                              7 : '+1 Weapon Potency' ,
                              8 : 'Expert Light Steel Sturdy Shield' ,
-                             9 : 'Wand of 2nd Level Spell' ,
-                             10 : '+1 Magic Weapon' ,
-                             11 : 'Bracers of Armor 2nd' ,
-                             12 : '+1 Handwraps of Mighty Fists'} ,
+                             9 : '+1 Magic Weapon' ,
+                             10 : 'Bracers of Armor 2nd' ,
+                             11 : '+1 Handwraps of Mighty Fists'} ,
              '5th Level' : { 1 : 'Ghoul Hide' ,
                              2 : 'Divine Prayer Beads' ,
                              3 : 'Skeleton Key' ,
@@ -99,7 +97,7 @@ Permanent = {'2nd Level' : { 1 : 'Expert Light Wooden Sturdy Shield' ,
                              6 : '+2 Handwraps of Mighty Fists' ,
                              7 : 'Lesser Spell Duelists Gloves' ,
                              8 : 'Lesser Spell Duelists Wand' ,
-                             9 : 'Horeshoes of Speed'},
+                             9 : 'Horeshoes of Speed' } ,
              '9th Level' : { 1 : 'Rhino Hide' ,
                              2 : 'Collar of Inconspicuousness' ,
                              3 : 'Horn of Blasting' ,
@@ -128,7 +126,7 @@ Permanent = {'2nd Level' : { 1 : 'Expert Light Wooden Sturdy Shield' ,
                              26 : 'Knapsack of Halflingkind' ,
                              27 : 'Necklace of Fireballs Type 3' ,
                              28 : 'Ring of Wizardry'},
-            '10th level' : { 1 : 'Breatplate of Command' ,
+            '10th Level' : { 1 : 'Breatplate of Command' ,
                              2 : 'Celestial Armor' ,
                              3 : 'Demon Armor' ,
                              4 : 'Electric Eelskin' ,
@@ -294,20 +292,20 @@ class Level_one () :
     def __init__ (self) :
         y = 1
         for x in range(int(y)) :
-            x = randint(1,7)
+            x = randint(1,6)
             Perm_treasure.append(Permanent['2nd Level'][x])
 class Level_one_extra () :
     def __init__ (self) :
         y = 1
         for x in range(int(y)) :
-            x = randint(1,7)
+            x = randint(1,6)
             Perm_treasure.append(Permanent['2nd Level'][x])
 class Level_two () : 
     def __init__ (self) :
         a = 2
         b = 1
         for x in range(int(a)) :
-            x = randint(1,7)
+            x = randint(1,6)
             Perm_treasure.append(Permanent['2nd Level'][x])
         for x in range(int(b)) :
             x = randint(1,9) 
@@ -316,7 +314,7 @@ class Level_two_extra () :
     def __init__ (self) :
         a = 1
         for x in range(int(a)) :
-            x = randint(1,7)
+            x = randint(1,6)
             Perm_treasure.append(Permanent['2nd Level'][x])
 class Level_three () : 
     def __init__ (self) :
@@ -326,7 +324,7 @@ class Level_three () :
             x = randint(1,9)
             Perm_treasure.append(Permanent['3rd Level'][x])
         for x in range(int(b)) :
-            x = randint(1,12) 
+            x = randint(1,11) 
             Perm_treasure.append(Permanent['4th Level'][x])  
 class Level_three_extra () : 
     def __init__ (self) :
@@ -339,7 +337,7 @@ class Level_four () :
         a = 2
         b = 2
         for x in range(int(a)) :
-            x = randint(1,12)
+            x = randint(1,11)
             Perm_treasure.append(Permanent['4th Level'][x])
         for x in range(int(b)) :
             x = randint(1,28) 
@@ -348,7 +346,7 @@ class Level_four_extra () :
     def __init__ (self) :
         a = 1
         for x in range(int(a)) :
-            x = randint(1,12)
+            x = randint(1,11)
             Perm_treasure.append(Permanent['4th Level'][x])
 class Level_five () : 
     def __init__ (self) :
@@ -359,7 +357,7 @@ class Level_five () :
             x = randint(1,28)
             Perm_treasure.append(Permanent['5th Level'][x])
         for x in range(int(c)) :
-            x = randint(1,12)
+            x = randint(1,11)
             Perm_treasure.append(Permanent['4th Level'][x])        
         for x in range(int(b)) :
             x = randint(1,18) 
