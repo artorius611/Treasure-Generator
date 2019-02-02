@@ -1,4 +1,5 @@
 from random import *
+import Spells
 
 Con_treasure = []
 Consumable = {'1st Level' : { 1 : 'Light Ammunition',
@@ -48,7 +49,8 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               13 : 'Sleep Poison' ,
                               14 : 'Black Adder Venom' ,
                               15 : 'Bloodseeker Beak' ,
-                              16 : 'Retruning Clasp'},
+                              16 : 'Retruning Clasp' ,
+                              17 : 'Wand of 1st Level spell'},
               '3rd Level' : { 1 : 'Beacon Shot' ,
                               2 : 'Spellstrike Ammunition 1st' ,
                               3 : 'Vine Arrow' , 
@@ -74,7 +76,8 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               3 : 'Fan Feather Token' ,
                               4 : 'Lesser Elixir of Life' ,
                               5 : 'Sea Touch Elixir' ,
-                              6 : 'Fear  Gem'},
+                              6 : 'Fear  Gem', 
+                              7 : 'Wand of 2nd Level Spell'},
               '5th Level' : { 1 : 'Spellstrike Ammunition 2nd' ,
                               2 : 'Dust of Appearance' ,
                               3 : 'Greater Antidote' ,
@@ -126,7 +129,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               9 : 'Wyvern Poison' ,
                               10 : 'Greater Healing Potion' ,
                               11 : 'Potion of Flying' , 
-                              12 : 'Wand of 4th Level Spell' ,},
+                              12 : 'Wand of 4th Level Spell'},
               '9th Level' : { 1 : 'Spellstrike Ammunition 4th' ,
                               2 : 'Dust of Disappearing' ,
                               3 : 'Whip Feather Token' ,
@@ -142,7 +145,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               13 : 'Gallows Tooth' ,
                               14 : 'Iron Medallion' ,
                               15 : 'Vanishing Coin'},
-             '10th level' : { 1 : 'Penetrating Ammunition' ,
+             '10th Level' : { 1 : 'Penetrating Ammunition' ,
                               2 : 'Storm Arrow' ,
                               3 : 'Elemental Gem' ,
                               4 : 'True Antidote' ,
@@ -222,12 +225,18 @@ class Level_one () :
         for x in range(int(a)) :
             x = randint(1,32)
             Con_treasure.append(Consumable['1st Level'][x])
+            if x == 23: 
+                Spells.spell_roll()              
         for x in range(int(b)) :
-            x = randint(1,16)
+            x = randint(1,17)
             Con_treasure.append(Consumable['2nd Level'][x])
+            if x == 17: 
+                Spells.spell_roll()
         for x in range(int(c)) :
             x = randint(1,20) 
             Con_treasure.append(Consumable['3rd Level'][x])
+            if x == 17: 
+                Spells.spell_roll()           
 class Level_one_extra () :
     def __init__ (self) :
         a = 1
@@ -236,16 +245,21 @@ class Level_one_extra () :
         for x in range(int(a)) :
             x = randint(1,32)
             Con_treasure.append(Consumable['1st Level'][x])
+            if x == 23: 
+                Spells.spell_roll()          
         for x in range(2) :
             x = randint(1,2)
             if x == 1 :
                 for x in range(int(b)) :
-                    x = randint(1,16)
+                    x = randint(1,17)
                     Con_treasure.append(Consumable['2nd Level'][x])
-            else :
+                    if x == 17: 
+                        Spells.spell_roll()
                 for x in range(int(c)) :
                     x = randint(1,20) 
                     Con_treasure.append(Consumable['3rd Level'][x])
+                    if x == 17: 
+                        Spells.spell_roll()                   
 class Level_two () : 
     def __init__ (self) :
         a = 2
@@ -254,43 +268,61 @@ class Level_two () :
         for x in range(int(a)) :
             x = randint(1,32)
             Con_treasure.append(Consumable['1st Level'][x])
+            if x == 23: 
+                Spells.spell_roll()  
         for x in range(int(b)) :
-            x = randint(1,16)
+            x = randint(1,17)
             Con_treasure.append(Consumable['2nd Level'][x])
+            if x == 17: 
+                Spells.spell_roll()          
         for x in range(int(c)) :
             x = randint(1,20) 
             Con_treasure.append(Consumable['3rd Level'][x]) 
+            if x == 17: 
+                Spells.spell_roll()            
 class Level_two_extra () : 
     def __init__ (self) :
         b = 1
         c = 1
         for x in range(int(b)) :
-            x = randint(1,16)
+            x = randint(1,17)
             Con_treasure.append(Consumable['2nd Level'][x])
+            if x == 17: 
+                Spells.spell_roll()           
         for x in range(2) :
             x = randint(1,2)
             if x == 1 :
                 for x in range(int(b)) :
-                    x = randint(1,16)
+                    x = randint(1,17)
                     Con_treasure.append(Consumable['2nd Level'][x])
+                    if x == 17: 
+                        Spells.spell_roll()                   
             else :
                 for x in range(int(c)) :
                     x = randint(1,20) 
                     Con_treasure.append(Consumable['3rd Level'][x])
+                    if x == 17: 
+                        Spells.spell_roll()                   
 class Level_three () : 
     def __init__ (self) :
         a = 2
         b = 6
         c = 4
         for x in range(int(a)) :
-            x = randint(1,16)
+            x = randint(1,17)
             Con_treasure.append(Consumable['2nd Level'][x])
+            if x == 17: 
+                Spells.spell_roll()          
         for x in range(int(b)) :
             x = randint(1,20)
             Con_treasure.append(Consumable['3rd Level'][x])
+            if x == 17: 
+                Spells.spell_roll()         
         for x in range(int(c)) :
-            x = randint(1,6) 
+            x = randint(1,7) 
             Con_treasure.append(Consumable['4th Level'][x]) 
+            if x == 7: 
+                Spells.spell_roll()               
 class Level_three_extra () : 
     def __init__ (self) :
         b = 1
@@ -298,16 +330,22 @@ class Level_three_extra () :
         for x in range(int(b)) :
             x = randint(1,20)
             Con_treasure.append(Consumable['3rd Level'][x])
+            if x == 17: 
+                Spells.spell_roll()         
         for x in range(2) :
             x = randint(1,2)
             if x == 1 :
                 for x in range(int(b)) :
                     x = randint(1,20)
                     Con_treasure.append(Consumable['3rd Level'][x])
+                    if x == 17: 
+                        Spells.spell_roll()                 
             else :
                 for x in range(int(c)) :
-                    x = randint(1,6) 
+                    x = randint(1,7) 
                     Con_treasure.append(Consumable['4th Level'][x])
+                    if x == 7: 
+                        Spells.spell_roll()                  
 class Level_four () : 
     def __init__ (self) :
         a = 2
@@ -316,43 +354,61 @@ class Level_four () :
         for x in range(int(a)) :
             x = randint(1,20)
             Con_treasure.append(Consumable['3rd Level'][x])
+            if x == 17: 
+                Spells.spell_roll()           
         for x in range(int(b)) :
-            x = randint(1,6)
+            x = randint(1,7)
             Con_treasure.append(Consumable['4th Level'][x])
+            if x == 7: 
+                Spells.spell_roll()         
         for x in range(int(c)) :
             x = randint(1,19) 
-            Con_treasure.append(Consumable['5th Level'][x]) 
+            Con_treasure.append(Consumable['5th Level'][x])
+            if x == 17: 
+                Spells.spell_roll()           
 class Level_four_extra () : 
     def __init__ (self) :
         b = 1
         c = 1
         for x in range(int(b)) :
-            x = randint(1,6)
+            x = randint(1,7)
             Con_treasure.append(Consumable['4th Level'][x])
+            if x == 7: 
+                Spells.spell_roll()        
         for x in range(2) :
             x = randint(1,2)
             if x == 1 :
                 for x in range(int(b)) :
-                    x = randint(1,6)
+                    x = randint(1,7)
                     Con_treasure.append(Consumable['4th Level'][x])
+                    if x == 7: 
+                        Spells.spell_roll()                
             else :
                 for x in range(int(c)) :
                     x = randint(1,19) 
                     Con_treasure.append(Consumable['5th Level'][x])
+                    if x == 17: 
+                        Spells.spell_roll()           
 class Level_five () : 
     def __init__ (self) :
         a = 2
         b = 6
         c = 2
         for x in range(int(a)) :
-            x = randint(1,6)
+            x = randint(1,7)
             Con_treasure.append(Consumable['4th Level'][x])
+            if x == 7: 
+                Spells.spell_roll()         
         for x in range(int(b)) :
             x = randint(1,19)
             Con_treasure.append(Consumable['5th Level'][x])
+            if x == 17: 
+                Spells.spell_roll()         
         for x in range(int(c)) :
             x = randint(1,10) 
-            Con_treasure.append(Consumable['6th Level'][x]) 
+            Con_treasure.append(Consumable['6th Level'][x])
+            if x == 10: 
+                Spells.spell_roll()        
 class Level_five_extra () : 
     def __init__ (self) :
         b = 1
@@ -360,16 +416,22 @@ class Level_five_extra () :
         for x in range(int(b)) :
             x = randint(1,19)
             Con_treasure.append(Consumable['5th Level'][x])
+            if x == 17: 
+                Spells.spell_roll()  
         for x in range(2) :
             x = randint(1,2)
             if x == 1 :
                 for x in range(int(b)) :
                     x = randint(1,19)
                     Con_treasure.append(Consumable['5th Level'][x])
+                    if x == 17: 
+                        Spells.spell_roll()             
             else :
                 for x in range(int(c)) :
                     x = randint(1,10) 
                     Con_treasure.append(Consumable['6th Level'][x])
+                    if x == 10: 
+                        Spells.spell_roll()            
 class Level_six () : 
     def __init__ (self) :
         a = 2
@@ -378,12 +440,18 @@ class Level_six () :
         for x in range(int(a)) :
             x = randint(1,19)
             Con_treasure.append(Consumable['5th Level'][x])
+            if x == 17: 
+                Spells.spell_roll() 
         for x in range(int(b)) :
             x = randint(1,10)
             Con_treasure.append(Consumable['6th Level'][x])
+            if x == 10: 
+                Spells.spell_roll()
         for x in range(int(c)) :
             x = randint(1,11) 
-            Con_treasure.append(Consumable['7th Level'][x]) 
+            Con_treasure.append(Consumable['7th Level'][x])
+            if x == 8: 
+                Spells.spell_roll()    
 class Level_six_extra () : 
     def __init__ (self) :
         b = 1
@@ -391,16 +459,22 @@ class Level_six_extra () :
         for x in range(int(b)) :
             x = randint(1,10)
             Con_treasure.append(Consumable['6th Level'][x])
+            if x == 10: 
+                Spells.spell_roll()    
         for x in range(2) :
             x = randint(1,2)
             if x == 1 :
                 for x in range(int(b)) :
                     x = randint(1,10)
                     Con_treasure.append(Consumable['6th Level'][x])
+                    if x == 10: 
+                        Spells.spell_roll()            
             else :
                 for x in range(int(c)) :
                     x = randint(1,11) 
                     Con_treasure.append(Consumable['7th Level'][x])
+                    if x == 8: 
+                        Spells.spell_roll()              
 class Level_seven () : 
     def __init__ (self) :
         a = 2
@@ -409,12 +483,18 @@ class Level_seven () :
         for x in range(int(a)) :
             x = randint(1,10)
             Con_treasure.append(Consumable['6th Level'][x])
+            if x == 10: 
+                Spells.spell_roll()     
         for x in range(int(b)) :
             x = randint(1,11)
             Con_treasure.append(Consumable['7th Level'][x])
+            if x == 8: 
+                Spells.spell_roll()    
         for x in range(int(c)) :
             x = randint(1,12) 
-            Con_treasure.append(Consumable['8th Level'][x]) 
+            Con_treasure.append(Consumable['8th Level'][x])
+            if x == 12: 
+                Spells.spell_roll() 
 class Level_seven_extra () : 
     def __init__ (self) :
         b = 1
@@ -422,16 +502,22 @@ class Level_seven_extra () :
         for x in range(int(b)) :
             x = randint(1,11)
             Con_treasure.append(Consumable['7th Level'][x])
+            if x == 8: 
+                Spells.spell_roll()        
         for x in range(2) :
             x = randint(1,2)
             if x == 1 :
                 for x in range(int(b)) :
                     x = randint(1,11)
                     Con_treasure.append(Consumable['7th Level'][x])
+                    if x == 8: 
+                        Spells.spell_roll()               
             else :
                 for x in range(int(c)) :
                     x = randint(1,12) 
                     Con_treasure.append(Consumable['8th Level'][x])
+                    if x == 12: 
+                        Spells.spell_roll()                
 class Level_eight () : 
     def __init__ (self) :
         a = 2
@@ -440,12 +526,18 @@ class Level_eight () :
         for x in range(int(a)) :
             x = randint(1,11)
             Con_treasure.append(Consumable['7th Level'][x])
+            if x == 8: 
+                Spells.spell_roll()     
         for x in range(int(b)) :
             x = randint(1,12)
             Con_treasure.append(Consumable['8th Level'][x])
+            if x == 12: 
+                Spells.spell_roll()      
         for x in range(int(c)) :
             x = randint(1,15) 
-            Con_treasure.append(Consumable['9th Level'][x]) 
+            Con_treasure.append(Consumable['9th Level'][x])
+            if x == 12: 
+                Spells.spell_roll()         
 class Level_eight_extra () : 
     def __init__ (self) :
         b = 1
@@ -453,16 +545,22 @@ class Level_eight_extra () :
         for x in range(int(b)) :
             x = randint(1,12)
             Con_treasure.append(Consumable['8th Level'][x])
+            if x == 12: 
+                Spells.spell_roll()    
         for x in range(2) :
             x = randint(1,2)
             if x == 1 :
                 for x in range(int(b)) :
                     x = randint(1,12)
                     Con_treasure.append(Consumable['8th Level'][x])
+                    if x == 12: 
+                        Spells.spell_roll()                  
             else :
                 for x in range(int(c)) :
                     x = randint(1,15) 
                     Con_treasure.append(Consumable['9th Level'][x])
+                    if x == 12: 
+                        Spells.spell_roll()              
 class Level_nine () : 
     def __init__ (self) :
         a = 2
@@ -471,9 +569,13 @@ class Level_nine () :
         for x in range(int(a)) :
             x = randint(1,12)
             Con_treasure.append(Consumable['8th Level'][x])
+            if x == 12: 
+                Spells.spell_roll() 
         for x in range(int(b)) :
             x = randint(1,15)
             Con_treasure.append(Consumable['9th Level'][x])
+            if x == 12: 
+                Spells.spell_roll()    
         for x in range(int(c)) :
             x = randint(1,11) 
             Con_treasure.append(Consumable['10th Level'][x]) 
@@ -484,12 +586,16 @@ class Level_nine_extra () :
         for x in range(int(b)) :
             x = randint(1,15)
             Con_treasure.append(Consumable['9th Level'][x])
+            if x == 12: 
+                Spells.spell_roll()
         for x in range(2) :
             x = randint(1,2)
             if x == 1 :
                 for x in range(int(b)) :
                     x = randint(1,15)
                     Con_treasure.append(Consumable['9th Level'][x])
+                    if x == 12: 
+                        Spells.spell_roll()                
             else :
                 for x in range(int(c)) :
                     x = randint(1,11) 
@@ -502,12 +608,16 @@ class Level_ten () :
         for x in range(int(a)) :
             x = randint(1,15)
             Con_treasure.append(Consumable['9th Level'][x])
+            if x == 12: 
+                Spells.spell_roll()     
         for x in range(int(b)) :
             x = randint(1,11)
             Con_treasure.append(Consumable['10th Level'][x])
         for x in range(int(c)) :
             x = randint(1,6) 
-            Con_treasure.append(Consumable['11th Level'][x]) 
+            Con_treasure.append(Consumable['11th Level'][x])
+            if x == 5: 
+                Spells.spell_roll()        
 class Level_ten_extra () : 
     def __init__ (self) :
         b = 1
@@ -525,3 +635,309 @@ class Level_ten_extra () :
                 for x in range(int(c)) :
                     x = randint(1,6) 
                     Con_treasure.append(Consumable['11th Level'][x])
+                    if x == 5: 
+                        Spells.spell_roll()         
+class Level_eleven () : 
+    def __init__ (self) :
+        a = 2
+        b = 4
+        c = 2
+        for x in range(int(a)) :
+            x = randint(1,11)
+            Con_treasure.append(Consumable['10th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,6)
+            Con_treasure.append(Consumable['11th Level'][x])
+            if x == 5: 
+                Spells.spell_roll()       
+        for x in range(int(c)) :
+            x = randint(1,8) 
+            Con_treasure.append(Consumable['12th Level'][x]) 
+class Level_eleven_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,6)
+            Con_treasure.append(Consumable['11th Level'][x])
+            if x == 5: 
+                Spells.spell_roll()       
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,6)
+                    Con_treasure.append(Consumable['11th Level'][x])
+                    if x == 5: 
+                        Spells.spell_roll()                  
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,8) 
+                    Con_treasure.append(Consumable['12th Level'][x])
+class Level_twelve () : 
+    def __init__ (self) :
+        a = 6
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,18)
+            Con_treasure.append(Consumable['12th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,13)
+            Con_treasure.append(Consumable['13th Level'][x])
+            if x == 12: 
+                Spells.spell_roll()      
+class Level_twelve_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,18)
+            Con_treasure.append(Consumable['12th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,18)
+                    Con_treasure.append(Consumable['12th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,13) 
+                    Con_treasure.append(Consumable['13th Level'][x])
+                    if x == 12: 
+                        Spells.spell_roll()             
+class Level_thirteen () : 
+    def __init__ (self) :
+        a = 2
+        b = 4
+        c = 2
+        for x in range(int(a)) :
+            x = randint(1,7)
+            Con_treasure.append(Consumable['12th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,13)
+            Con_treasure.append(Consumable['13th Level'][x])
+            if x == 12: 
+                Spells.spell_roll()        
+        for x in range(int(c)) :
+            x = randint(1,5) 
+            Con_treasure.append(Consumable['14th Level'][x]) 
+class Level_thirteen_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,13)
+            Con_treasure.append(Consumable['13th Level'][x])
+            if x == 12: 
+                Spells.spell_roll()     
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,13)
+                    Con_treasure.append(Consumable['13th Level'][x])
+                    if x == 12: 
+                        Spells.spell_roll()                
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,5) 
+                    Con_treasure.append(Consumable['14th Level'][x])
+class Level_fourteen () : 
+    def __init__ (self) :
+        a = 2
+        b = 4
+        c = 2
+        for x in range(int(a)) :
+            x = randint(1,13)
+            Con_treasure.append(Consumable['13th Level'][x])
+            if x == 12: 
+                Spells.spell_roll()    
+        for x in range(int(b)) :
+            x = randint(1,5)
+            Con_treasure.append(Consumable['14th Level'][x])
+        for x in range(int(c)) :
+            x = randint(1,7) 
+            Con_treasure.append(Consumable['15th Level'][x])
+            if x == 6: 
+                Spells.spell_roll()       
+class Level_fourteen_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,5)
+            Con_treasure.append(Consumable['14th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,5)
+                    Con_treasure.append(Consumable['14th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,7) 
+                    Con_treasure.append(Consumable['15th Level'][x])
+                    if x == 6: 
+                        Spells.spell_roll()                
+class Level_fifteen () : 
+    def __init__ (self) :
+        a = 2
+        b = 4
+        c = 2
+        for x in range(int(a)) :
+            x = randint(1,5)
+            Con_treasure.append(Consumable['14th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,7)
+            Con_treasure.append(Consumable['15th Level'][x])
+            if x == 6: 
+                Spells.spell_roll()        
+        for x in range(int(c)) :
+            x = randint(1,3) 
+            Con_treasure.append(Consumable['16th Level'][x]) 
+class Level_fifteen_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,7)
+            Con_treasure.append(Consumable['15th Level'][x])
+            if x == 6: 
+                Spells.spell_roll()     
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,7)
+                    Con_treasure.append(Consumable['15th Level'][x])
+                    if x == 6: 
+                        Spells.spell_roll()               
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,3) 
+                    Con_treasure.append(Consumable['16th Level'][x])
+class Level_sixteen () : 
+    def __init__ (self) :
+        a = 4
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,3)
+            Con_treasure.append(Consumable['16th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,11)
+            Con_treasure.append(Consumable['17th Level'][x])
+            if x == 6: 
+                Spells.spell_roll()      
+class Level_sixteen_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,3)
+            Con_treasure.append(Consumable['16th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,3)
+                    Con_treasure.append(Consumable['16th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,11) 
+                    Con_treasure.append(Consumable['17th Level'][x])
+                    if x == 6: 
+                        Spells.spell_roll()                             
+class Level_seventeen () : 
+    def __init__ (self) :
+        a = 4
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,11)
+            Con_treasure.append(Consumable['17th Level'][x])
+            if x == 6: 
+                Spells.spell_roll()                  
+        for x in range(int(b)) :
+            x = randint(1,1)
+            Con_treasure.append(Consumable['18th Level'][x]) 
+class Level_seventeen_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,11)
+            Con_treasure.append(Consumable['17th Level'][x])
+            if x == 6: 
+                Spells.spell_roll()                  
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,11)
+                    Con_treasure.append(Consumable['17th Level'][x])
+                    if x == 6: 
+                        Spells.spell_roll()                            
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,1) 
+                    Con_treasure.append(Consumable['18th Level'][x])
+class Level_eighteen () : 
+    def __init__ (self) :
+        a = 4
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,1)
+            Con_treasure.append(Consumable['18th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,2)
+            Con_treasure.append(Consumable['19th Level'][x])
+class Level_eighteen_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,1)
+            Con_treasure.append(Consumable['18th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,1)
+                    Con_treasure.append(Consumable['18th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,2) 
+                    Con_treasure.append(Consumable['19th Level'][x])
+class Level_nineteen () : 
+    def __init__ (self) :
+        a = 4
+        b = 2
+        for x in range(int(a)) :
+            x = randint(1,2)
+            Con_treasure.append(Consumable['19th Level'][x])
+        for x in range(int(b)) :
+            x = randint(1,4)
+            Con_treasure.append(Consumable['20th Level'][x]) 
+class Level_nineteen_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,2)
+            Con_treasure.append(Consumable['19th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,2)
+                    Con_treasure.append(Consumable['19th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,4) 
+                    Con_treasure.append(Consumable['20th Level'][x])
+class Level_twenty () : 
+    def __init__ (self) :
+        a = 4
+        for x in range(int(a)) :
+            x = randint(1,4)
+            Con_treasure.append(Consumable['20th Level'][x])
+class Level_twenty_extra () : 
