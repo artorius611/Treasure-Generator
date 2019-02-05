@@ -290,317 +290,228 @@ Permanent = {'2nd Level' : { 1 : 'Expert Light Wooden Sturdy Shield' ,
 
 class Level_one () :
     def __init__ (self) :
-        y = 1
-        for x in range(int(y)) :
-            x = randint(1,6)
-            Perm_treasure.append(Permanent['2nd Level'][x])
-class Level_one_extra () :
-    def __init__ (self) :
-        y = 1
-        for x in range(int(y)) :
-            x = randint(1,6)
-            Perm_treasure.append(Permanent['2nd Level'][x])
+        x = randint(1, len(Permanent['2nd Level']))
+        Perm_treasure.append(Permanent['2nd Level'][x])
 class Level_two () : 
     def __init__ (self) :
-        a = 2
-        b = 1
-        for x in range(int(a)) :
-            x = randint(1,6)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['2nd Level']))
             Perm_treasure.append(Permanent['2nd Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,9) 
-            Perm_treasure.append(Permanent['3rd Level'][x])  
-class Level_two_extra () : 
-    def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,6)
-            Perm_treasure.append(Permanent['2nd Level'][x])
+        x = randint(1, len(Permanent['3rd Level']))
+        Perm_treasure.append(Permanent['3rd Level'][x])  
 class Level_three () : 
     def __init__ (self) :
-        a = 3
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,9)
+        for x in range(int(3)) :
+            x = randint(1, len(Permanent['3rd Level']))
             Perm_treasure.append(Permanent['3rd Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,11) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['4th Level']))
             Perm_treasure.append(Permanent['4th Level'][x])  
 class Level_three_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,9)
-            Perm_treasure.append(Permanent['3rd Level'][x]) 
+        x = randint(1, len(Permanent['3rd Level']))
+        Perm_treasure.append(Permanent['3rd Level'][x]) 
 class Level_four () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,11)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['4th Level']))
             Perm_treasure.append(Permanent['4th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,28) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['5th Level']))
             Perm_treasure.append(Permanent['5th Level'][x])  
 class Level_four_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,11)
-            Perm_treasure.append(Permanent['4th Level'][x])
+        x = randint(1, len(Permanent['4th Level']))
+        Perm_treasure.append(Permanent['4th Level'][x])
 class Level_five () : 
     def __init__ (self) :
-        a = 2
-        b = 1
-        c = 1
-        for x in range(int(a)) :
-            x = randint(1,28)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['5th Level']))
             Perm_treasure.append(Permanent['5th Level'][x])
-        for x in range(int(c)) :
-            x = randint(1,11)
+        for x in range(int(1)) :
+            x = randint(1, len(Permanent['4th Level']))
             Perm_treasure.append(Permanent['4th Level'][x])        
-        for x in range(int(b)) :
-            x = randint(1,18) 
+        for x in range(int(1)) :
+            x = randint(1, len(Permanent['6th Level']))
             Perm_treasure.append(Permanent['6th Level'][x])  
 class Level_five_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,28)
-            Perm_treasure.append(Permanent['5th Level'][x]) 
+        x = randint(1, len(Permanent['5th Level']))
+        Perm_treasure.append(Permanent['5th Level'][x]) 
 class Level_six () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,18)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['6th Level']))
             Perm_treasure.append(Permanent['6th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,16) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['7th Level']))
             Perm_treasure.append(Permanent['7th Level'][x])  
 class Level_six_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,18)
-            Perm_treasure.append(Permanent['6th Level'][x]) 
+        x = randint(1, len(Permanent['6th Level']))
+        Perm_treasure.append(Permanent['6th Level'][x]) 
 class Level_seven () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,16)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['7th Level']))
             Perm_treasure.append(Permanent['7th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,9) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['8th Level']))
             Perm_treasure.append(Permanent['8th Level'][x])  
 class Level_seven_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,16)
-            Perm_treasure.append(Permanent['7th Level'][x])
+        x = randint(1, len(Permanent['7th Level']))
+        Perm_treasure.append(Permanent['7th Level'][x])
 class Level_eight () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,9)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['8th Level']))
             Perm_treasure.append(Permanent['8th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,28) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['9th Level']))
             Perm_treasure.append(Permanent['9th Level'][x])  
 class Level_eight_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,9)
-            Perm_treasure.append(Permanent['8th Level'][x]) 
+        x = randint(1, len(Permanent['8th Level']))
+        Perm_treasure.append(Permanent['8th Level'][x]) 
 class Level_nine () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,28)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['9th Level']))
             Perm_treasure.append(Permanent['9th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,18) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['10th Level']))
             Perm_treasure.append(Permanent['10th Level'][x])  
 class Level_nine_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,28)
-            Perm_treasure.append(Permanent['9th Level'][x]) 
+        x = randint(1, len(Permanent['9th Level']))
+        Perm_treasure.append(Permanent['9th Level'][x]) 
 class Level_ten () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,18)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['10th Level']))
             Perm_treasure.append(Permanent['10th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,18) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['11th Level']))
             Perm_treasure.append(Permanent['11th Level'][x])  
 class Level_ten_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,18)
-            Perm_treasure.append(Permanent['10th Level'][x]) 
+        x = randint(1, len(Permanent['10th Level']))
+        Perm_treasure.append(Permanent['10th Level'][x]) 
 class Level_eleven () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,18)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['11th Level']))
             Perm_treasure.append(Permanent['11th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,18) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['12th Level']))
             Perm_treasure.append(Permanent['12th Level'][x])  
 class Level_eleven_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,18)
-            Perm_treasure.append(Permanent['11th Level'][x]) 
+        x = randint(1, len(Permanent['11th Level']))
+        Perm_treasure.append(Permanent['11th Level'][x]) 
 class Level_twelve () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,18)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['12th Level']))
             Perm_treasure.append(Permanent['12th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,28) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['13th Level']))
             Perm_treasure.append(Permanent['13th Level'][x])  
 class Level_twelve_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,18)
-            Perm_treasure.append(Permanent['12th Level'][x]) 
+        x = randint(1, len(Permanent['12th Level']))
+        Perm_treasure.append(Permanent['12th Level'][x]) 
 class Level_thirteen () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,28)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['13th Level']))
             Perm_treasure.append(Permanent['13th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,24) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['14th Level']))
             Perm_treasure.append(Permanent['14th Level'][x])  
 class Level_thirteen_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,28)
-            Perm_treasure.append(Permanent['13th Level'][x]) 
+        x = randint(1, len(Permanent['13th Level']))
+        Perm_treasure.append(Permanent['13th Level'][x]) 
 class Level_fourteen () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,24)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['14th Level']))
             Perm_treasure.append(Permanent['14th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,9) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['15th Level']))
             Perm_treasure.append(Permanent['15th Level'][x])  
 class Level_fourteen_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,24)
-            Perm_treasure.append(Permanent['14th Level'][x]) 
+        x = randint(1, len(Permanent['14th Level']))
+        Perm_treasure.append(Permanent['14th Level'][x]) 
 class Level_fifteen () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,9)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['15th Level']))
             Perm_treasure.append(Permanent['15th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,10) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['16th Level']))
             Perm_treasure.append(Permanent['16th Level'][x])  
 class Level_fifteen_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,9)
-            Perm_treasure.append(Permanent['15th Level'][x]) 
+        x = randint(1, len(Permanent['15th Level']))
+        Perm_treasure.append(Permanent['15th Level'][x]) 
 class Level_sixteen () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,10)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['16th Level']))
             Perm_treasure.append(Permanent['16th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,10) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['17th Level']))
             Perm_treasure.append(Permanent['17th Level'][x])  
 class Level_sixteen_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,10)
-            Perm_treasure.append(Permanent['16th Level'][x]) 
+        x = randint(1, len(Permanent['16th Level']))
+        Perm_treasure.append(Permanent['16th Level'][x]) 
 class Level_seventeen () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,10)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['17th Level']))
             Perm_treasure.append(Permanent['17th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,9) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['18th Level']))
             Perm_treasure.append(Permanent['18th Level'][x])  
 class Level_seventeen_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,10)
-            Perm_treasure.append(Permanent['17th Level'][x]) 
+        x = randint(1, len(Permanent['17th Level']))
+        Perm_treasure.append(Permanent['17th Level'][x]) 
 class Level_eighteen () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,9)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['18th Level']))
             Perm_treasure.append(Permanent['18th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,10) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['19th Level']))
             Perm_treasure.append(Permanent['19th Level'][x])  
 class Level_eighteen_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,9)
-            Perm_treasure.append(Permanent['18th Level'][x]) 
+        x = randint(1, len(Permanent['18th Level']))
+        Perm_treasure.append(Permanent['18th Level'][x]) 
 class Level_nineteen () : 
     def __init__ (self) :
-        a = 2
-        b = 2
-        for x in range(int(a)) :
-            x = randint(1,10)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['19th Level']))
             Perm_treasure.append(Permanent['19th Level'][x])
-        for x in range(int(b)) :
-            x = randint(1,7) 
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['20th Level']))
             Perm_treasure.append(Permanent['20th Level'][x])  
 class Level_nineteen_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,10)
-            Perm_treasure.append(Permanent['19th Level'][x]) 
+        x = randint(1, len(Permanent['19th Level']))
+        Perm_treasure.append(Permanent['19th Level'][x]) 
 class Level_twenty () : 
     def __init__ (self) :
-        a = 2
-        for x in range(int(a)) :
-            x = randint(1,7)
+        for x in range(int(2)) :
+            x = randint(1, len(Permanent['20th Level']))
             Perm_treasure.append(Permanent['20th Level'][x])
 class Level_twenty_extra () : 
     def __init__ (self) :
-        a = 1
-        for x in range(int(a)) :
-            x = randint(1,7)
-            Perm_treasure.append(Permanent['20th Level'][x])                                                                                                                         
+        x = randint(1, len(Permanent['20th Level']))
+        Perm_treasure.append(Permanent['20th Level'][x])                                                                                                                         
