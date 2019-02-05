@@ -17,7 +17,7 @@ if int(level) == 1 :
         base_party += 1
         gold += 8
         Consumable_Role.Level_one_extra()
-        Permanent_Role.Level_one_extra()
+        Permanent_Role.Level_one()
     else :
         print (Consumable_Role.Con_treasure)
         print (Permanent_Role.Perm_treasure)
@@ -30,7 +30,7 @@ elif int(level) == 2 :
         base_party += 1
         gold += 16
         Consumable_Role.Level_two_extra()
-        Permanent_Role.Level_two_extra()
+        Permanent_Role.Level_one()
     else :
         print (Consumable_Role.Con_treasure)
         #print (Permanent_Role.Perm_treasure)
@@ -263,7 +263,7 @@ elif int(level) == 20 :
     while base_party < int(party) :
         base_party += 1
         gold += 35000
-        Consumable_Role.Level_twenty_extra()
+        Permanent_Role.Level_twenty_extra()
         Permanent_Role.Level_twenty_extra()
     else :
         print (Consumable_Role.Con_treasure)
