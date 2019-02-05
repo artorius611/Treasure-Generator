@@ -658,344 +658,42 @@ Primal = { '1st Level' : { 1 : 'Air Bubble' ,
             '10th Level' : { 1 : 'Nature Incarnate' ,
                              2 : 'Primal Herd' ,
                              3 : 'Primal Phenomenon'}}  
-class spell_roll() :
-    #Determining what Type of Magic
+
+magic_dict = {
+    'Arcane' : Arcane,
+    'Divine' : Divine,
+    'Occult' : Occult,
+    'Primal' : Primal
+}
+
+max_spell_level_dict = {
+    'Wand': 4,
+    'Scroll': 9
+}
+
+class spell_roll :
     def __init__ (self) :
-        # Arcane = 1 , Divine = 2, Occult = 3, Primal = 4
-        x = randint(1,4)
-        if x == 1 : 
-            if 'Wand of 1st Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['1st Level']))
-                magic = Arcane['1st Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 1st Level spell')
-            elif 'Wand of 2nd Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['2nd Level']))
-                magic = Arcane['2nd Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 2nd Level spell')
-            elif 'Wand of 3rd Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['3rd Level']))
-                magic = Arcane['3rd Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 3rd Level spell')
-            elif 'Wand of 4th Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['4th Level']))
-                magic = Arcane['4th Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Coin.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 4th Level spell')
+        magic_type = choice(list(magic_dict))
+        consumable_type = choice(list(max_spell_level_dict))
+        max_spell_level = max_spell_level_dict[consumable_type]
+        self.get_magic_item(magic_type, consumable_type, max_spell_level)
 
-            if 'Scroll of 1st level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['1st Level']))
-                magic = Arcane['1st Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 1st level spell')
-            elif 'Scroll of 2nd level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['2nd Level']))
-                magic = Arcane['2nd Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 2nd level spell') 
-            elif 'Scroll of 3rd level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['3rd Level']))
-                magic = Arcane['3rd Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 3rd level spell')
-            elif 'Scroll of 4th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['4th Level']))
-                magic = Arcane['4th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 4th level spell') 
-            elif 'Scroll of 5th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['5th Level']))
-                magic = Arcane['5th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 5th level spell') 
-            elif 'Scroll of 6th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['6th Level']))
-                magic = Arcane['6th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 6th level spell')
-            elif 'Scroll of 7th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['7th Level']))
-                magic = Arcane['7th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 7th level spell') 
-            elif 'Scroll of 8th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['8th Level']))
-                magic = Arcane['8th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 8th level spell') 
-            elif 'Scroll of 9th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Arcane['9th Level']))  
-                magic = Arcane['9th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 9th level spell')
-        elif x == 2 :
-            if 'Wand of 1st Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['1st Level']))
-                magic = Divine['1st Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 1st Level spell')
-            elif 'Wand of 2nd Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['2nd Level']))
-                magic = Divine['2nd Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 2nd Level spell')
-            elif 'Wand of 3rd Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['3rd Level']))
-                magic = Divine['3rd Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 3rd Level spell')
-            elif 'Wand of 4th Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['4th Level']))
-                magic = Divine['4th Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Coin.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 4th Level spell')
+        
+    def get_magic_item(self, magic_type, consumable_type, max_spell_level):
+        """
+        The function takes the following inputs, and then modifies the
+        Consumable_Role.Con_treasure data structure accordingly.
 
-            if 'Scroll of 1st level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['1st Level']))
-                magic = Divine['1st Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 1st level spell')
-            elif 'Scroll of 2nd level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['2nd Level']))
-                magic = Divine['2nd Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 2nd level spell') 
-            elif 'Scroll of 3rd level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['3rd Level']))
-                magic = Divine['3rd Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 3rd level spell')
-            elif 'Scroll of 4th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['4th Level']))
-                magic = Divine['4th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 4th level spell') 
-            elif 'Scroll of 5th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['5th Level']))
-                magic = Divine['5th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 5th level spell') 
-            elif 'Scroll of 6th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['6th Level']))
-                magic = Divine['6th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 6th level spell')
-            elif 'Scroll of 7th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['7th Level']))
-                magic = Divine['7th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 7th level spell') 
-            elif 'Scroll of 8th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['8th Level']))
-                magic = Divine['8th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 8th level spell') 
-            elif 'Scroll of 9th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Divine['9th Level']))  
-                magic = Divine['9th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 9th level spell')
-        elif x == 3 :
-            if 'Wand of 1st Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['1st Level']))
-                magic = Occult['1st Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 1st Level spell')
-            elif 'Wand of 2nd Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['2nd Level']))
-                magic = Occult['2nd Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 2nd Level spell')
-            elif 'Wand of 3rd Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['3rd Level']))
-                magic = Occult['3rd Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 3rd Level spell')
-            elif 'Wand of 4th Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['4th Level']))
-                magic = Occult['4th Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Coin.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 4th Level spell')
-
-            if 'Scroll of 1st level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['1st Level']))
-                magic = Occult['1st Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 1st level spell')
-            elif 'Scroll of 2nd level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['2nd Level']))
-                magic = Occult['2nd Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 2nd level spell') 
-            elif 'Scroll of 3rd level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['3rd Level']))
-                magic = Occult['3rd Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 3rd level spell')
-            elif 'Scroll of 4th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['4th Level']))
-                magic = Occult['4th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 4th level spell') 
-            elif 'Scroll of 5th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['5th Level']))
-                magic = Occult['5th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 5th level spell') 
-            elif 'Scroll of 6th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['6th Level']))
-                magic = Occult['6th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 6th level spell')
-            elif 'Scroll of 7th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['7th Level']))
-                magic = Occult['7th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 7th level spell') 
-            elif 'Scroll of 8th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['8th Level']))
-                magic = Occult['8th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 8th level spell') 
-            elif 'Scroll of 9th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Occult['9th Level']))  
-                magic = Occult['9th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 9th level spell')
-        elif x == 4 :
-            if 'Wand of 1st Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['1st Level']))
-                magic = Primal['1st Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 1st Level spell')
-            elif 'Wand of 2nd Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['2nd Level']))
-                magic = Primal['2nd Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 2nd Level spell')
-            elif 'Wand of 3rd Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['3rd Level']))
-                magic = Primal['3rd Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Con_treasure.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 3rd Level spell')
-            elif 'Wand of 4th Level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['4th Level']))
-                magic = Primal['4th Level'][x]
-                charges = randint(1,10)
-                wand = ("Wand of",magic,charges,"charges left")
-                Consumable_Role.Coin.append(wand)
-                Consumable_Role.Con_treasure.remove('Wand of 4th Level spell')
-
-            if 'Scroll of 1st level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['1st Level']))
-                magic = Primal['1st Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 1st level spell')
-            elif 'Scroll of 2nd level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['2nd Level']))
-                magic = Primal['2nd Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 2nd level spell') 
-            elif 'Scroll of 3rd level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['3rd Level']))
-                magic = Primal['3rd Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 3rd level spell')
-            elif 'Scroll of 4th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['4th Level']))
-                magic = Primal['4th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 4th level spell') 
-            elif 'Scroll of 5th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['5th Level']))
-                magic = Primal['5th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 5th level spell') 
-            elif 'Scroll of 6th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['6th Level']))
-                magic = Primal['6th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 6th level spell')
-            elif 'Scroll of 7th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['7th Level']))
-                magic = Primal['7th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 7th level spell') 
-            elif 'Scroll of 8th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['8th Level']))
-                magic = Primal['8th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll)
-                Consumable_Role.Con_treasure.remove('Scroll of 8th level spell') 
-            elif 'Scroll of 9th level spell' in Consumable_Role.Con_treasure:
-                x = randint(1, len(Primal['9th Level']))  
-                magic = Primal['9th Level'][x]
-                scroll = ('Scroll of',magic)
-                Consumable_Role.Con_treasure.append(scroll) 
-                Consumable_Role.Con_treasure.remove('Scroll of 9th level spell')
+        magic_type      := [ "Arcane", "Divine", "Occult", "Primal" ]
+        consumable_type := [ "Scroll", "Wand" ]
+        max_spell_level := < The highest possible level of the spell >
+        """
+        for level in range(1, max_spell_level):
+            generic_str = f"{consumable_type} of Level {level} spell"
+            if generic_str in Consumable_Role.Con_treasure:
+                magic_type_dict = magic_dict[magic_type]
+                x = randint(1, len( magic_type_dict[f"Level {level}"] ))
+                magic = magic_type_dict[f"Level {level}"][x]
+                item = f"{consumable_type} of {magic} with { randint(1, 10) } charges left"
+                Consumable_Role.Con_treasure.append(item)
+                Consumable_Role.Con_treasure.remove(generic_str)
