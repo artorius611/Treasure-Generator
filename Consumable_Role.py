@@ -661,7 +661,7 @@ class Level_fourteen_extra () :
         for x in range(2) :
             x = randint(1,2)
             if x == 1 :
-            x = randint(1, len(Consumable['14th Level']))
+                x = randint(1, len(Consumable['14th Level']))
                 Con_treasure.append(Consumable['14th Level'][x])
             else :
                 x = randint(1, len(Consumable['15th Level']))
