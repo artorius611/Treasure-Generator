@@ -941,3 +941,19 @@ class Level_twenty () :
             x = randint(1,4)
             Con_treasure.append(Consumable['20th Level'][x])
 class Level_twenty_extra () : 
+    def __init__ (self) :
+        b = 1
+        c = 1
+        for x in range(int(b)) :
+            x = randint(1,4)
+            Con_treasure.append(Consumable['20th Level'][x])
+        for x in range(2) :
+            x = randint(1,2)
+            if x == 1 :
+                for x in range(int(b)) :
+                    x = randint(1,2)
+                    Con_treasure.append(Consumable['19th Level'][x])
+            else :
+                for x in range(int(c)) :
+                    x = randint(1,4) 
+                    Con_treasure.append(Consumable['20th Level'][x])                                                                                                                                                                                    
