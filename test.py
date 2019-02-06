@@ -278,24 +278,23 @@ print (level)
 if  int(level) == 1:
     print ('You choose 1!')
     while current_level <= max_level :
-        number_rolled = consumable_level[f'Level {level}'][int(current_level)]
+        number_rolled = consumable_level[f"Level {level}"][int(current_level)]
         current_level += 1
-        for x in range(number_rolled) :
+        for _ in range(number_rolled) :
             x = randint(1, len(Consumable[f"Level {level}"]))
             Con_treasure.append(Consumable[f"Level {level}"][x]) 
-elif level == 12 :
+elif int(level) == 12 :
     print ('You choose 12!')
-    max_level = level + 2
+    max_level = int(level) + 1
     while current_level <= max_level :
-        current_level = current_level - 1
-        number_rolled = consumable_level[f'Level {level}'][int(current_level)]
+        number_rolled = consumable_level[f"Level {level}"][int(current_level)]
         current_level += 1
-        for x in range(number_rolled) :
+        for _ in range(number_rolled) :
             x = randint(1, len(Consumable[f"Level {level}"]))
             Con_treasure.append(Consumable[f"Level {level}"][x]) 
-elif level == 20 :
+elif int(level) == 20 :
     print ('You choose 20!')
-    number_rolled = consumable_level[f'Level {level}'][int(current_level)]
+    number_rolled = consumable_level[f"Level {level}"][int(current_level)]
     for x in range(number_rolled) :
         x = randint(1, len(Consumable[f"Level {level}"]))
         Con_treasure.append(Consumable[f"Level {level}"][x]) 
@@ -303,9 +302,11 @@ else:
     print ('You choose something other than 1, 12, or 20!')
     while current_level <= max_level :
         current_level = current_level - 1
-        number_rolled = consumable_level[f'Level {level}'][int(current_level)]
+        print('I made it here!')
+        number_rolled = consumable_level[f"Level {level}"][int(current_level)]
         current_level += 1
-        for x in range(number_rolled) :
+        for _ in range(number_rolled) :
+            print('I made it here too!')
             x = randint(1, len(Consumable[f"Level {level}"]))
             Con_treasure.append(Consumable[f"Level {level}"][x])             
 print (Con_treasure)   
