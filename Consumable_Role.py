@@ -24,7 +24,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               20 : 'Arsenic' ,
                               21 : 'Giant Centipede Venom' ,
                               22 : 'Minor Healing potion' ,
-                              23 : 'Scroll of 1st level spell' ,
+                              23 : 'Scroll of Level 1 Spell' ,
                               24 : 'Silversheen' ,
                               25 : 'Smokestick' ,
                               26 : 'Sunrod' ,
@@ -50,7 +50,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               14 : 'Black Adder Venom' ,
                               15 : 'Bloodseeker Beak' ,
                               16 : 'Retruning Clasp' ,
-                              17 : 'Wand of 1st Level spell'},
+                              17 : 'Wand of Level 1 Spell'},
               '3rd Level' : { 1 : 'Beacon Shot' ,
                               2 : 'Spellstrike Ammunition 1st' ,
                               3 : 'Vine Arrow' , 
@@ -67,7 +67,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               14 : 'Invisibillity Potion' ,
                               15 : 'Lesser Healing Potion' ,
                               16 : 'Potion of Water Breathing' ,
-                              17 : 'Scroll of 2nd Level Spell' ,
+                              17 : 'Scroll of Level 2 Spell' ,
                               18 : 'Feather Step Stone' ,
                               19 : 'Monkey Pin' ,
                               20 : 'Savior Spike'},
@@ -77,7 +77,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               4 : 'Lesser Elixir of Life' ,
                               5 : 'Sea Touch Elixir' ,
                               6 : 'Fear  Gem', 
-                              7 : 'Wand of 2nd Level Spell'},
+                              7 : 'Wand of Level 2 Spell'},
               '5th Level' : { 1 : 'Spellstrike Ammunition 2nd' ,
                               2 : 'Dust of Appearance' ,
                               3 : 'Greater Antidote' ,
@@ -94,7 +94,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               14 : 'Lesser Potion of Resistance' ,
                               15 : 'Moderate Healing Potion' ,
                               16 : 'Potion of Leaping ' ,
-                              17 : 'Scroll of 3rd Level Spell' ,
+                              17 : 'Scroll of Level 3 Spell' ,
                               18 : 'Bronze Bull pendant' ,
                               19 : 'Onyx Panther'},
               '6th Level' : { 1 : 'Tree Feather Token' ,
@@ -106,7 +106,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               7 : 'Grim Trophy' ,
                               8 : 'Mesmerizing Opal' ,
                               9 : 'Mummified Bat' ,
-                              10 : 'Wand of 3rd Level Spell'},
+                              10 : 'Wand of Level 3 Spell'},
               '7th Level' : { 1 : 'Spellstrike Ammunition 3rd' ,
                               2 : 'Anchor Feather Token' ,
                               3 : 'Candle of Revealing' ,
@@ -114,7 +114,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               5 : 'Malyass Root Paste' ,
                               6 : 'Potion of Disguise' ,
                               7 : 'Young Dragons Breath Potion' ,
-                              8 : 'Scroll of 4th Level Spell' ,
+                              8 : 'Scroll of Level 4 Spell' ,
                               9 : 'Effervescent Ampule' ,
                               10 : 'Murderers Knot' , 
                               11 : 'Swift Block Cabochon'},
@@ -129,7 +129,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               9 : 'Wyvern Poison' ,
                               10 : 'Greater Healing Potion' ,
                               11 : 'Potion of Flying' , 
-                              12 : 'Wand of 4th Level Spell'},
+                              12 : 'Wand of Level 4 Spell'},
               '9th Level' : { 1 : 'Spellstrike Ammunition 4th' ,
                               2 : 'Dust of Disappearing' ,
                               3 : 'Whip Feather Token' ,
@@ -141,7 +141,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               9 : 'Lich Dust' ,
                               10 : 'Spider Root' ,
                               11 : 'Potion of Resistance' ,
-                              12 : 'Scroll of 5th Level Spell' ,
+                              12 : 'Scroll of Level 5 Spell' ,
                               13 : 'Gallows Tooth' ,
                               14 : 'Iron Medallion' ,
                               15 : 'Vanishing Coin'},
@@ -160,7 +160,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               2 : 'Oil of Animation', 
                               3 : 'Greater Salve of Antiparalysis' ,
                               4 : 'Blightburn Resin' ,
-                              5 : 'Scroll of 6th Level Spell' ,
+                              5 : 'Scroll of Level 6 Spell' ,
                               6 : 'Mending Lattice'},
              '12th Level' : { 1 : 'Greater Explosive Ammunition' ,
                               2 : 'Greater Elixir of Life' ,
@@ -181,7 +181,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               9 : 'Purple Worm Venom' ,
                               10 : 'Greater Potion of Resistance' ,
                               11 : 'Panacea' ,
-                              12 : 'Scroll of 7th Level Spell' ,
+                              12 : 'Scroll of Level 7 Spell' ,
                               13 : 'Sunstone Beads'},
              '14th Level' : { 1 : 'Ghost Ammunition' ,
                               2 : 'Stone Bullet' ,
@@ -193,7 +193,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               3 : 'Obfuscation Oil' ,
                               4 : 'Dragon Bile' ,
                               5 : 'Insanity Mist' ,
-                              6 : 'Scroll of 8th Level Spell' ,
+                              6 : 'Scroll of Level 8 Spell' ,
                               7 : 'Ghost Dust'},
              '16th Level' : { 1 : 'True Elixir of Life' ,
                               2 : 'Brimstone Fumes' ,
@@ -207,7 +207,7 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               7 : 'True Silvertounge Mutagen' ,
                               8 : 'Hemlock' ,
                               9 : 'Wyrm Dragons Breath Potion' ,
-                              10 :'Scroll of 9th Level Spell' ,
+                              10 :'Scroll of Level 9 Spell' ,
                               11 : 'Spell Sliver'},
              '18th Level' : { 1 : 'Kings Sleep'},
              '19th Level' : { 1 : 'Spellstrike Ammunition 9th' ,
@@ -217,13 +217,17 @@ Consumable = {'1st Level' : { 1 : 'Light Ammunition',
                               3 : 'Tears of Death' ,
                               4 : 'Philosophers Stone'}}
 
+magic_type = 0
+consumable_type = 0
+max_spell_level = 0
+
 class Level_one () :
     def __init__ (self) :
         for x in range(int(12)) :
             x = randint(1, len(Consumable['1st Level']))
             Con_treasure.append(Consumable['1st Level'][x])
             if x == 23: 
-                Spells.spell_roll()              
+                Spells.spell_roll()
         for x in range(int(4)) :
             x = randint(1, len(Consumable['2nd Level']))
             Con_treasure.append(Consumable['2nd Level'][x])
@@ -233,13 +237,13 @@ class Level_one () :
             x = randint(1, len(Consumable['3rd Level'])) 
             Con_treasure.append(Consumable['3rd Level'][x])
             if x == 17: 
-                Spells.spell_roll()           
+                Spells.spell_roll()
 class Level_one_extra () :
     def __init__ (self) :
         x = randint(1, len(Consumable['1st Level']))
         Con_treasure.append(Consumable['1st Level'][x])
         if x == 23: 
-            Spells.spell_roll()          
+                Spells.spell_roll()
         for x in range(2) :
             x = randint(1,2)
             if x == 1 :
@@ -251,7 +255,7 @@ class Level_one_extra () :
                 x = randint(1, len(Consumable['3rd Level'])) 
                 Con_treasure.append(Consumable['3rd Level'][x])
                 if x == 17: 
-                    Spells.spell_roll()                   
+                    Spells.spell_roll()
 class Level_two () : 
     def __init__ (self) :
         x = randint(1, len(Consumable['1st Level']))
