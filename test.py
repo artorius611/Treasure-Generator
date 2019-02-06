@@ -1,6 +1,5 @@
 from random import *
 
-level = input('Whats the level? ')
 Con_treasure = []
 Consumable = {'Level 1' : { 1 : 'Light Ammunition',
                               2 : 'Acid Flask',
@@ -270,46 +269,48 @@ consumable_level = { 'Level 1' : { 1 : 10 ,
                                     20 : 2} ,
                      'Level 20' : {20 : 4}}
 
-number_rolled = consumable_level[f'Level {level}'][int(level)]
-table_used = Consumable[f"Level {level}"]
-current_level = int(level)
-max_level = int(level) + 2
-print (level)
-if  int(level) == 1:
-    print ('You choose 1!')
-    while current_level <= max_level :
-        number_rolled = consumable_level[f"Level {level}"][int(current_level)]
-        current_level += 1
-        for _ in range(number_rolled) :
-            x = randint(1, len(Consumable[f"Level {level}"]))
-            Con_treasure.append(Consumable[f"Level {level}"][x]) 
-elif int(level) == 12 :
-    print ('You choose 12!')
-    max_level = int(level) + 1
-    while current_level <= max_level :
-        number_rolled = consumable_level[f"Level {level}"][int(current_level)]
-        current_level += 1
-        for _ in range(number_rolled) :
-            x = randint(1, len(Consumable[f"Level {level}"]))
-            Con_treasure.append(Consumable[f"Level {level}"][x]) 
-elif int(level) == 20 :
-    print ('You choose 20!')
-    number_rolled = consumable_level[f"Level {level}"][int(current_level)]
-    for x in range(number_rolled) :
-        x = randint(1, len(Consumable[f"Level {level}"]))
-        Con_treasure.append(Consumable[f"Level {level}"][x]) 
-else:
-    print ('You choose something other than 1, 12, or 20!')
-    while current_level <= max_level :
-        current_level = current_level - 1
-        print('I made it here!')
-        number_rolled = consumable_level[f"Level {level}"][int(current_level)]
-        current_level += 1
-        for _ in range(number_rolled) :
-            print('I made it here too!')
-            x = randint(1, len(Consumable[f"Level {level}"]))
-            Con_treasure.append(Consumable[f"Level {level}"][x])             
-print (Con_treasure)   
 
+class Consumables () :
+    def __init__ (self) :
+        self.level = level
+        number_rolled = consumable_level[f'Level {level}'][int(level)]
+        table_used = Consumable[f"Level {level}"]
+        current_level = int(level)
+        max_level = int(level) + 1
 
+    def random_choice(source_dict, level=None):
+        src = Consumable[f"Level {level}"] if level else Consumable
+        return choice( list( src.values() ) )
 
+    def get_consumable_items ( level, number_rolled, table_used, current_level, max_level, source_dict) :
+        if  int(level) == 1:
+            print ('You choose 1!')
+            max_level = int(level) + 2
+            while current_level <= max_level :
+                number_rolled = consumable_level[f"Level {level}"][int(current_level)]
+                current_level += 1
+                for _ in range(number_rolled) :
+                    Con_treasure.append( random_choice(Consumable, level) ) 
+        elif int(level) == 12 :
+            print ('You choose 12!')
+            while current_level <= max_level :
+                number_rolled = consumable_level[f"Level {level}"][int(current_level)]
+                current_level += 1
+                for _ in range(number_rolled) :
+                    Con_treasure.append( random_choice(Consumable, level) ) 
+        elif int(level) == 20 :
+            print ('You choose 20!')
+            number_rolled = consumable_level[f"Level {level}"][int(current_level)]
+            for _ in range(number_rolled) :
+                Con_treasure.append( random_choice(Consumable, level) )
+        else:
+            print ('You choose something other than 1, 12, or 20!')
+            while current_level <= max_level :
+                current_level = current_level - 1
+                print('I made it here!')
+                number_rolled = consumable_level[f"Level {level}"][int(current_level)]
+                current_level += 1
+                for _ in range(number_rolled) :
+                    print('I made it here too!')
+                    Con_treasure.append( random_choice(Consumable, level) )
+        print (Con_treasure)   
