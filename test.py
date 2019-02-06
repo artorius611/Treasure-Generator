@@ -275,15 +275,16 @@ table_used = Consumable[f"Level {level}"]
 current_level = int(level)
 max_level = int(level) + 2
 print (level)
-if  2 <= int(level) >= 11 or 13 <= int(level) >= 19:
+if  int(level) == 1:
+    print ('You choose 1!')
     while current_level <= max_level :
-        current_level = current_level - 1
         number_rolled = consumable_level[f'Level {level}'][int(current_level)]
         current_level += 1
         for x in range(number_rolled) :
             x = randint(1, len(Consumable[f"Level {level}"]))
             Con_treasure.append(Consumable[f"Level {level}"][x]) 
 elif level == 12 :
+    print ('You choose 12!')
     max_level = level + 2
     while current_level <= max_level :
         current_level = current_level - 1
@@ -293,17 +294,20 @@ elif level == 12 :
             x = randint(1, len(Consumable[f"Level {level}"]))
             Con_treasure.append(Consumable[f"Level {level}"][x]) 
 elif level == 20 :
+    print ('You choose 20!')
     number_rolled = consumable_level[f'Level {level}'][int(current_level)]
     for x in range(number_rolled) :
         x = randint(1, len(Consumable[f"Level {level}"]))
         Con_treasure.append(Consumable[f"Level {level}"][x]) 
 else:
+    print ('You choose something other than 1, 12, or 20!')
     while current_level <= max_level :
+        current_level = current_level - 1
         number_rolled = consumable_level[f'Level {level}'][int(current_level)]
         current_level += 1
         for x in range(number_rolled) :
             x = randint(1, len(Consumable[f"Level {level}"]))
-            Con_treasure.append(Consumable[f"Level {level}"][x]) 
+            Con_treasure.append(Consumable[f"Level {level}"][x])             
 print (Con_treasure)   
 
 
